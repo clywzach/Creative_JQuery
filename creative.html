@@ -6,13 +6,17 @@
          crossorigin="anonymous"></script>
 <script>
 $(document).ready(function(){
-var url = "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=boolean"
-$.getJSON(url, function(data){
-console.log(data);
-console.log(data[0]);
+var myurl = "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=boolean"
 
+console.log(myurl);
+$.ajax({
+	url: myurl,
+	dataType: "json",
+	success: function(parsed_json){
+	console.log(parsed_json)
+}
 });
-});
+
 </script>
 <body>
 hi
