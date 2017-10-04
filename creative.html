@@ -1,1 +1,19 @@
-ok
+<html>
+<head>
+<script
+         src="http://code.jquery.com/jquery-3.2.1.min.js"
+         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+         crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+var url = "https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=boolean"
+$.getJSON(url, function(data){
+console.log(data);
+console.log(data[0]);
+
+});
+});
+</script>
+<body>
+hi
+</body>
