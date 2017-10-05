@@ -1,0 +1,53 @@
+<html>
+<head>
+<link rel="stylesheet" href="cats.css">
+<link rel="icon" href="http://images.all-free-download.com/images/graphiclarge/red_question_mark_icon_vector_281131.jpg">
+<script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+<script>
+        $(document).ready(function(){
+                $("#randomButton").click(function(e) {
+                
+                        var myurl = "http://random.cat/meow";
+                        var everything;
+                        $.ajax({
+                                url: myurl,
+                                dataType: "json",
+                                success: function(parsed_json) {
+                                        var catPicture = parsed_json.file;
+                                        everything = "<img src=" + catPicture + ">";
+                                        $("#catPicture").html(everything);
+                                        }
+                        });
+                        var myurl2 = "https://talaikis.com/api/quotes/random/";
+                        var quote;
+                        $.ajax({
+                                url: myurl2,
+                                dataType: "json",
+                                success: function(data)
+                                {
+                                        quote = data.quote;
+                                        $("#Inspiration").html(quote);
+                                }
+                        });
+                });
+        });
+</script>
+<body>
+        <div id="body-container">
+                <div id="header">
+                <h1> Inspirational Cats </h1>
+                        <div id = "body">
+                                <div id = "catPicture">
+                                </div>
+                                        <div id = "Inspiration">
+                                        </div>
+                                        <div id="randomize">
+                                        <button id="randomButton">RANDOMIZE</button>
+                                        </div>
+                        </div>
+                </div>
+<p>DISCLAIMER:API has been slow recently</p>
+        </div>
+</body>
+</html>
