@@ -6,8 +6,8 @@ body{
 
 h1{
   font-size:46px;
-  -webkit-transition-duration:0.4s;
-  transition-duration:0.4s; 
+  -webkit-transition-duration:1s;
+  transition-duration:1s; 
 }
 h1:hover{
 color:#ad21ff; 
@@ -45,8 +45,9 @@ img:hover{
     display: inline-block;
     font-size: 16px;
     font-weight: bold; 
-    -webkit-transition-duration:0.4s;
-    transition-duration: 0.4s; 
+    -webkit-transition-duration:1s;
+    transition-duration: 1s;
+    margin-bottom:30px; 
 }
 #randomButton:hover{
 background-color:#ad21ff;
@@ -56,7 +57,9 @@ color:white;
 	padding: 20px;
 	font-size: 26px;
 	font-weight: italic; 
-	
+	margin-right: auto;
+	margin-left: auto;
+	width:70%;
  
 }
 p{
