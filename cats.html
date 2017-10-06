@@ -26,7 +26,7 @@
                                 dataType: "json",
                                 success: function(data)
                                 {
-                                        quote = data.quote;
+                                        quote = "\"" + data.quote + "\"";
                                         $("#Inspiration").html(quote);
                                 }
                         });
